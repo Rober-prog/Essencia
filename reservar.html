@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar cita — Essència</title>
+  <meta name="description" content="Reserva tu cita en Essència. Elige servicio, fecha y hora.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a962' stroke-width='2'><circle cx='6' cy='6' r='3'/><circle cx='6' cy='18' r='3'/><line x1='20' y1='4' x2='8.12' y2='15.88'/><line x1='14.47' y1='14.48' x2='20' y2='20'/><line x1='8.12' y1='8.12' x2='12' y2='12'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <a href="index.html" class="logo"><img src="logoese.png" alt="Essència" class="logo-img"></a>
+          <span class="rating"><i data-lucide="star" class="icon-sm"></i> 5.0</span>
+        </div>
+        
+        <nav class="main-nav">
+          <a href="index.html#sobre">Sobre nosotros</a>
+          <a href="services.html">Servicios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+        
+        <div class="actions">
+          <a href="https://www.instagram.com/essencia_salonbio/" target="_blank" rel="noopener" class="social-link" title="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="reservar.html" class="btn btn-primary">Reservar cita</a>
+          <button class="nav-toggle" aria-label="Menú"><i data-lucide="menu"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Reservar -->
+  <section class="reservar" id="reservar">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <div class="hero-badge" style="display: inline-flex;">
+          <i data-lucide="calendar" class="icon-sm"></i>
+          <span>Reserva online 24/7</span>
+        </div>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-top: 20px;">
+          Reserva tu <span style="background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">cita</span>
+        </h1>
+      </div>
+
+      <div class="reserve-grid">
+        <form id="reserva-form" class="form-card" novalidate>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="field-row">
+              <label for="nombre">Nombre *</label>
+              <input id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="field-row">
+              <label for="apellidos">Apellidos *</label>
+              <input id="apellidos" name="apellidos" required placeholder="Tus apellidos">
+            </div>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="field-row">
+              <label for="telefono">Teléfono *</label>
+              <input id="telefono" name="telefono" type="tel" required placeholder="+34 600 000 000">
+            </div>
+            <div class="field-row">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+          </div>
+          
+          <div class="field-row">
+            <label for="servicio-select">Servicio *</label>
+            <select id="servicio-select" required>
+              <!-- Opciones cargadas por JS -->
+            </select>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="field-row">
+              <label for="fecha">Fecha *</label>
+              <input id="fecha" name="fecha" type="date" required>
+            </div>
+            <div class="field-row">
+              <label for="hora">Hora *</label>
+              <select id="hora" required>
+                <!-- Opciones cargadas por JS -->
+              </select>
+            </div>
+          </div>
+          
+          <div class="field-row">
+            <label for="comentarios">Comentarios (opcional)</label>
+            <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Alguna petición especial o información adicional?"></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i data-lucide="check" class="icon-sm"></i>
+              Confirmar reserva
+            </button>
+          </div>
+          <p id="reserva-mensaje" style="text-align: center; margin-top: 16px;"></p>
+        </form>
+
+        <aside class="panel">
+          <h3><i data-lucide="info" class="icon-sm"></i> Información</h3>
+          <p>Al confirmar la reserva, recibirás un correo de confirmación con todos los detalles de tu cita.</p>
+          
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border);">
+            <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-primary);">Dirección</h4>
+            <p style="margin-bottom: 20px;">[Tu dirección aquí]</p>
+            
+            <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-primary);">Horario</h4>
+            <p>Lunes a Viernes: 9:00 - 20:00<br>Sábados: 9:00 - 14:00<br>Domingos: Cerrado</p>
+          </div>
+          
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border);">
+            <h4 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-primary);">¿Preguntas?</h4>
+            <p>Contáctanos por teléfono o WhatsApp para cualquier consulta.</p>
+            <a href="index.html#contacto" class="btn btn-secondary" style="width: 100%; margin-top: 12px;">
+              <i data-lucide="phone" class="icon-sm"></i>
+              Contactar
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top: 80px;">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p>© 2026 Essència by Rosa Aguilera. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-actions">
+          <a href="index.html">Inicio</a>
+          <a href="services.html">Servicios</a>
+          <a href="https://www.instagram.com/essencia_salonbio/" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js" defer></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>

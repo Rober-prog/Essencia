@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios — Essència</title>
+  <meta name="description" content="Todos los servicios de Essència: peluquería, barbería, estética y tratamientos capilares. Precios y duraciones exactos.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a962' stroke-width='2'><circle cx='6' cy='6' r='3'/><circle cx='6' cy='18' r='3'/><line x1='20' y1='4' x2='8.12' y2='15.88'/><line x1='14.47' y1='14.48' x2='20' y2='20'/><line x1='8.12' y1='8.12' x2='12' y2='12'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <a href="index.html" class="logo"><img src="logoese.png" alt="Essència" class="logo-img"></a>
+          <span class="rating"><i data-lucide="star" class="icon-sm"></i> 5.0</span>
+        </div>
+        
+        <nav class="main-nav">
+          <a href="index.html#sobre">Sobre nosotros</a>
+          <a href="services.html">Servicios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+        
+        <div class="actions">
+          <a href="https://www.instagram.com/essencia_salonbio/" target="_blank" rel="noopener" class="social-link" title="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="reservar.html" class="btn btn-primary">Reservar cita</a>
+          <button class="nav-toggle" aria-label="Menú"><i data-lucide="menu"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Servicios -->
+  <section class="servicios">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <div class="hero-badge" style="display: inline-flex;">
+          <i data-lucide="sparkles" class="icon-sm"></i>
+          <span>Más de 30 servicios disponibles</span>
+        </div>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-top: 20px;">
+          Nuestros <span style="background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">servicios</span>
+        </h1>
+      </div>
+
+      <!-- Populares -->
+      <div class="cards-grid" id="cards-populares">
+        <h3 class="section-subtitle" style="color: var(--accent-gold);"><i data-lucide="sparkles" class="icon-sm"></i> Populares</h3>
+      </div>
+      <div class="cards-grid" id="cards-peluqueria" style="margin-top: 60px;">
+        <h3 class="section-subtitle"><i data-lucide="scissors" class="icon-sm"></i> Peluquería</h3>
+      </div>
+
+      <!-- Estética -->
+      <div class="cards-grid" id="cards-estetica" style="margin-top: 60px;">
+        <h3 class="section-subtitle"><i data-lucide="heart" class="icon-sm"></i> Estética</h3>
+      </div>
+
+      <!-- Barbería -->
+      <div class="cards-grid" id="cards-barberia" style="margin-top: 60px;">
+        <h3 class="section-subtitle"><i data-lucide="user" class="icon-sm"></i> Barbería</h3>
+      </div>
+
+      <!-- Tratamientos -->
+      <div class="cards-grid" id="cards-tratamientos" style="margin-top: 60px;">
+        <h3 class="section-subtitle"><i data-lucide="leaf" class="icon-sm"></i> Tratamientos</h3>
+      </div>
+
+      <!-- CTA final -->
+      <div style="text-align: center; margin-top: 80px; padding: 60px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-xl);">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 16px;">
+          ¿Has encontrado tu <span style="color: var(--accent-gold);">servicio</span>?
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;">Reserva ahora y disfruta de una experiencia única en nuestro salón.</p>
+        <a href="reservar.html" class="btn btn-primary">
+          <i data-lucide="calendar" class="icon-sm"></i>
+          Reservar cita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top: 80px;">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p>© 2026 Essència by Rosa Aguilera. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-actions">
+          <a href="index.html">Inicio</a>
+          <a href="reservar.html">Reservar</a>
+          <a href="https://www.instagram.com/essencia_salonbio/" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal detalles -->
+  <div class="modal" id="service-modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Cerrar">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/scripts.js" defer></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>
