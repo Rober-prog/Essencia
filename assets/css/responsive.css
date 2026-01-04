@@ -219,4 +219,16 @@
   .cta-box {
     padding: 32px 24px;
   }
+
+  #cookies-popup {
+    padding: 16px !important;
+  }
+
+  #cookies-popup > div > div {
+    flex-direction: column !important;
+  }
+
+  #cookies-popup .btn {
+    width: 100%;
+  }
 }

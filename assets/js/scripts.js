@@ -514,3 +514,36 @@ document.addEventListener('DOMContentLoaded',()=>{
     const params = new URLSearchParams(location.search); const s = params.get('service'); if(s && servicioSelect) servicioSelect.value = s;
   }
 });
+
+// FUNCIONES PARA POLÍTICAS Y COOKIES
+function openPoliciesModal(e){
+  if(e) e.preventDefault();
+  const modal = document.getElementById('policies-modal');
+  if(modal) modal.setAttribute('aria-hidden', 'false');
+}
+
+function closePoliciesModal(){
+  const modal = document.getElementById('policies-modal');
+  if(modal) modal.setAttribute('aria-hidden', 'true');
+}
+
+function showCookiesPopup(){
+  const cookiesAccepted = localStorage.getItem('essencia_cookies_accepted');
+  if(!cookiesAccepted){
+    const popup = document.getElementById('cookies-popup');
+    if(popup) popup.style.display = 'block';
+  }
+}
+
+function acceptCookies(){
+  localStorage.setItem('essencia_cookies_accepted', 'true');
+  const popup = document.getElementById('cookies-popup');
+  if(popup) popup.style.display = 'none';
+}
+
+function rejectCookies(){
+  localStorage.setItem('essencia_cookies_accepted', 'rejected');
+  const popup = document.getElementById('cookies-popup');
+  if(popup) popup.style.display = 'none';
+}
+

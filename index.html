@@ -261,6 +261,7 @@
         <div class="footer-actions">
           <a href="services.html">Servicios</a>
           <a href="reservar.html">Reservar</a>
+          <a href="#" onclick="openPoliciesModal(event)">Políticas y Cookies</a>
           <a href="https://www.instagram.com/essencia_salonbio/" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
         </div>
       </div>
@@ -325,10 +326,53 @@
     </div>
   </div>
 
+  <!-- Modal Políticas y Cookies -->
+  <div class="modal" id="policies-modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Cerrar" onclick="closePoliciesModal()">✕</button>
+      <div style="max-height: 60vh; overflow-y: auto;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-gold);">Política de Privacidad y Cookies</h2>
+        
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Protección de Datos</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8;">En Essència, nos comprometemos a proteger tu privacidad. Los datos personales que nos proporcionas se utilizan únicamente para gestionar tus reservas y comunicarnos contigo sobre nuestros servicios. Nunca compartimos tu información con terceros sin tu consentimiento.</p>
+
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Uso de Cookies</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8;">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Las cookies nos ayudan a recordar tus preferencias y a entender cómo utilizas nuestro sitio. Puedes controlar o desactivar las cookies en los ajustes de tu navegador.</p>
+
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Tipos de Cookies</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8;"><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento del sitio.<br><strong>Cookies de análisis:</strong> Nos ayudan a mejorar el sitio recopilando datos anónimos sobre cómo lo utilizas.<br><strong>Cookies de preferencias:</strong> Recuerdan tus preferencias y configuración.</p>
+
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Tus Derechos</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8;">Tienes derecho a acceder, modificar o eliminar tus datos personales. Para ejercer estos derechos, contacta con nosotros en <strong>roberbla349@gmail.com</strong>.</p>
+
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Contacto</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8;">Si tienes preguntas sobre nuestra política de privacidad, contáctanos en <strong>roberbla349@gmail.com</strong> o llamando al <strong>673 30 49 51</strong>.</p>
+
+        <button onclick="closePoliciesModal()" class="btn btn-primary" style="margin-top: 20px;">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Cookies -->
+  <div id="cookies-popup" style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-card); border-top: 1px solid var(--glass-border); padding: 20px; z-index: 1000; display: none; max-width: 100%; box-shadow: 0 -4px 12px rgba(0,0,0,0.3);">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 250px;">
+          <p style="margin: 0; color: var(--text-secondary);">Utilizamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestro uso de cookies.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button onclick="rejectCookies()" class="btn btn-secondary" style="white-space: nowrap;">Rechazar</button>
+          <button onclick="acceptCookies()" class="btn btn-primary" style="white-space: nowrap;">Aceptar cookies</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/scripts.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => lucide.createIcons(), 100);
+      showCookiesPopup();
     });
   </script>
 </body>
