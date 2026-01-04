@@ -32,8 +32,8 @@
   }
   
   .brand img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
   
   .main-nav {
@@ -170,18 +170,11 @@
     font-size: 0.85rem;
   }
   
-  .carousel {
-    height: 250px;
+  .brand img {
+    width: 65px;
+    height: 65px;
   }
-  
-  .carousel-container {
-    aspect-ratio: 1 / 1;
-  }
-  
-  .galeria-trabajos-grid {
-    grid-template-columns: 1fr;
-  }
-  
+
   .header-inner {
     padding: 12px 0;
   }
