@@ -118,7 +118,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  padding-top: 76px;
+  padding-top: 130px;
 }
 
 /* Fondo animado con gradiente */
@@ -257,7 +257,7 @@ body::before {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 20px 0;
+  padding: 8px 0;
   transition: all var(--transition-smooth);
   background: var(--bg-dark);
   border-bottom: 1px solid var(--glass-border);
@@ -265,8 +265,9 @@ body::before {
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .brand {
