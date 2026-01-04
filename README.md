@@ -307,3 +307,5 @@ Notas
 -----
 - No se han inventado teléfonos, emails ni horarios: aparecen como campos editables/placeholder para que la gerente los complete.
 - En el formulario de suscripción el endpoint `/api/suscripciones` es un ejemplo; sustituir por su servicio de email marketing (Mailchimp, Sendinblue, etc.).
+#   E s s e n c i a  
+ 
