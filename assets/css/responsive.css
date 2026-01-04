@@ -31,9 +31,13 @@
     display: none;
   }
   
+  .social-link {
+    display: none;
+  }
+  
   .brand img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 85px !important;
+    height: 85px !important;
   }
   
   .main-nav {
@@ -59,6 +63,12 @@
     border-color: var(--accent-gold);
   }
   
+  .nav-instagram {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
   .nav-toggle [data-lucide] {
     width: 20px;
     height: 20px;
@@ -171,8 +181,8 @@
   }
   
   .brand img {
-    width: 65px !important;
-    height: 65px !important;
+    width: 80px !important;
+    height: 80px !important;
   }
 
   .header-inner {
