@@ -118,7 +118,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  padding-top: 108px;
+  padding-top: 44px;
 }
 
 /* Fondo animado con gradiente */
@@ -257,7 +257,7 @@ body::before {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 4px 0;
+  padding: 2px 0;
   transition: all var(--transition-smooth);
   background: var(--bg-dark);
   border-bottom: 1px solid var(--glass-border);
@@ -284,7 +284,7 @@ body::before {
 }
 
 .logo-img {
-  height: 100px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
@@ -293,7 +293,9 @@ body::before {
   opacity: 0.9;
 }
 
-.rating {
+.nav-instagram {
+  display: none !important;
+}.rating {
   display: flex;
   align-items: center;
   gap: 6px;
