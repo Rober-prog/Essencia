@@ -445,6 +445,33 @@ document.addEventListener('DOMContentLoaded',()=>{
   generateTimeOptions();
   initCarousel();
   
+  // MENÚ HAMBURGUESA
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click', ()=>{
+      mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+      mainNav.style.position = 'absolute';
+      mainNav.style.top = '76px';
+      mainNav.style.left = '0';
+      mainNav.style.right = '0';
+      mainNav.style.flexDirection = 'column';
+      mainNav.style.gap = '16px';
+      mainNav.style.padding = '16px';
+      mainNav.style.backgroundColor = 'var(--bg-dark)';
+      mainNav.style.borderBottom = '1px solid var(--glass-border)';
+      mainNav.style.zIndex = '100';
+    });
+    
+    // Cerrar menú al hacer click en un enlace
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', ()=>{
+        mainNav.style.display = 'none';
+      });
+    });
+  }
+  
   // Evento click en el mapa para abrir Google Maps
   const mapContainer = document.getElementById('contacto-map-container');
   if(mapContainer){

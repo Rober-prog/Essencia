@@ -27,6 +27,15 @@
 }
 
 @media (max-width: 768px) {
+  .rating {
+    display: none;
+  }
+  
+  .brand img {
+    width: 50px;
+    height: 50px;
+  }
+  
   .main-nav {
     display: none;
   }
@@ -109,7 +118,7 @@
   }
   
   .carousel-container {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
   }
   
   .mosaic {
@@ -163,6 +172,10 @@
   
   .carousel {
     height: 250px;
+  }
+  
+  .carousel-container {
+    aspect-ratio: 1 / 1;
   }
   
   .galeria-trabajos-grid {
