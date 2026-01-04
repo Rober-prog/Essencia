@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     navToggle.addEventListener('click', ()=>{
       mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
       mainNav.style.position = 'absolute';
-      mainNav.style.top = '130px';
+      mainNav.style.top = '108px';
       mainNav.style.left = '0';
       mainNav.style.right = '0';
       mainNav.style.flexDirection = 'column';
